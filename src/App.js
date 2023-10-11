@@ -29,9 +29,6 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LogIn />} />
-          <Route path="/updateAdOw/:id" element={<AdminEditAO />} />
-         
-
           {role === 1 && (
             <>
               <Route path="/customer/home" element={<HomeCustomer />} />
@@ -44,7 +41,7 @@ export default function App() {
               <Route path="/admin/home" element={<HomeAdmin />} />
               <Route path="/admin/datauser" element={<DataUserAdmin />} />
               <Route
-                path="/admin/createuser"
+                path="/createuser"
                 element={<CustomerCreateAdmin />}
               />
               <Route path="/admin/createadmin" element={<AdminCreate />} />
@@ -63,6 +60,7 @@ export default function App() {
               />
               <Route path="/update/:id" element={<CustomerEditAdmin />} />
               <Route path="/show" element={<ShowDataBalance />} />
+              <Route path="/updateAdOw/:id" element={<AdminEditAO />} />
             </>
           )}
           {role === 3 && (
@@ -74,6 +72,10 @@ export default function App() {
                 element={<DataBalanceOwner />}
               />
               <Route
+                path="/createuser"
+                element={<CustomerCreateAdmin />}
+              />
+              <Route
                 path="/owner/balance/create"
                 element={<BalanceCreateOwner />}
               />
@@ -83,6 +85,7 @@ export default function App() {
               />
               <Route path="/update/:id" element={<CustomerEditAdmin />} />
               <Route path="/show" element={<ShowDataBalance />} />
+              <Route path="/updateAdOw/:id" element={<AdminEditAO />} />
             </>
           )}
         </Routes>

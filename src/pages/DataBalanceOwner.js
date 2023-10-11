@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
-import Nav from "../components/Nav";
+import NavOw from "../components/NavOw";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { format } from "date-fns-tz";
@@ -150,7 +150,7 @@ export default function DataBalanceAdmin() {
 
   return (
     <>
-      <Nav />
+      <NavOw />
       <CssBaseline />
       <Container
         maxWidth="xl"
